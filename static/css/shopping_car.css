@@ -1,0 +1,172 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color:#262b2f;
+}
+img{
+	vertical-align: top;
+}
+body{
+	background-color: #fff;
+	font:12px/20px "微软雅黑"; 
+}
+html{
+	font-size: 100px;
+	color: #4a4a4a;
+}
+h1,h2,h3{
+	font-weight: normal;
+}
+
+.g_header{
+	width: 100%;
+	height: .44rem;
+	background-color: #cc3333;
+	position: relative;
+}
+.g_header .quiet{
+	height: .17rem;
+	background: url(http://img.ddsy.com/c/wap/images/wap/ico-back.png) 0 0 no-repeat;
+	background-size: .17rem;
+	color: #fff;
+	padding-left: .16rem;
+	position: absolute;
+	top: .13rem;
+	line-height: .17rem;
+	left: .13rem;
+}
+.g_header h1{
+	height: .44rem;
+	line-height: .44rem;
+	font-weight: normal;
+	color: #fff;
+	font-size: .18rem;
+	text-align: center;
+}
+.g_header .mod{
+	position: absolute;
+	top: .13rem;
+	right: .1rem;
+	color: #fff;
+}
+
+.sure{
+	width: 100%;
+	height: .37rem;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #eee;
+	position: relative;
+}
+.sure >span{
+	display: inline-block;
+	width: .18rem;
+	height: .18rem;
+	background: url(http://img.ddsy.com/c/wap/images/wap/ico-select-goods.png) no-repeat;
+	background-size: .18rem .18rem;
+	position: absolute;
+	top: .1rem;
+	left: .07rem;
+}
+.sure .yaofang{
+	margin-left: .32rem;
+	line-height: .37rem;
+}
+.sure .yaofang h3 img{
+	width:.18rem;
+	height: .18rem; 
+	margin-top: .1rem;
+}
+.sure .yaofang h3{
+	height: .18rem;
+	line-height: .37rem;
+	font-size: .13rem;
+}
+.sure .yaofang h3 .fast{
+	float: right;
+	color: #cc3333;
+	padding-right: .08rem;
+}
+
+.goods_list{
+	width: 100%;
+	height: .82rem;
+	border: 1px solid #eee;
+	position: relative;
+	padding: .06rem;
+	position: relative;
+	box-sizing: border-box;
+}
+.goods_list .select{
+	display: inline-block;
+	width: .18rem;
+	height: .18rem;
+	background: url(http://img.ddsy.com/c/wap/images/wap/ico-select-goods.png) no-repeat;
+	background-size: .18rem .18rem;
+	position: absolute;
+	top: .29rem;
+	left: .07rem;
+}
+.goods_list .goods .box{
+	float: left;
+	display: inline-block;
+	width: .68rem;
+	height: .68rem;
+	border: 1px solid #eee;
+	margin-left: .32rem;
+	margin-right: .06rem;
+}
+.goods_list .goods .box a img{
+	width: .68rem;
+	height: .68rem;
+}
+.goods_list .number{
+	height: .26rem;
+	background-color: #f5f5f5;
+	float: right;
+	position: absolute;
+	right: .2rem;
+	bottom: .24rem;
+}
+.goods_list .number span{
+	display: inline-block;
+	background-color: #fff;
+	width: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #9b9b9b;
+    margin: 1px;
+    font-weight: bold;
+}
+.goods_list .number input{
+	width: .38rem;
+	border: none;
+	background-color: #f5f5f5;
+	text-align: center;
+}
+
+.g_footer{
+	width: 100%;
+	height: .45rem;
+	background-color: #f5f5f5;
+	z-index: 1;
+}
+.g_footer .tijiao{
+	float: right;
+	width: .64rem;
+	height: 100%;
+	background-color: #cc3333;
+	text-align: center;
+	line-height: .45rem;
+}
+.g_footer .tijiao a{
+	color: #fff;
+}

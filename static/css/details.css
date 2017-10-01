@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+html{
+    font-size: 100px;
+}
+#app {
+    font-family:  'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-align: center; */
+    background-color: #F8F8F8;
+}
+
+/* 顶部导航 */
+.detahead{
+    width: 100%;
+    height: .695rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #AB813E;
+}
+.detahead .headBox{
+    width: 100%;
+    height: .465rem;
+    line-height: 40px;
+    margin-top: 23px;
+    position: relative;
+}
+.detahead .headBox .scan{
+    float: left;
+    width: .19rem;
+    height: .17rem;
+    margin-top: 10px;
+    margin-left: 16.5px;
+    font-size: .16rem;
+}
+.detahead .headBox .nav{
+    width: 3.045rem;
+    float: left;
+    height: 100%;
+}
+.detahead .headBox .nav .nav_a{
+    width: 1.9rem;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 0;
+}
+.detahead .headBox .nav .nav_a a{
+    color: #919293;
+    display: inline-block;
+    padding: 0 .1375rem;
+    font-weight: 600;
+    font-size: 16px;
+}
+.detahead .headBox .nav .nav_a .select{
+    color: #DD4456;
+    border-bottom: 2px solid #C5414E;
+}
+.detahead .headBox .search{
+    float: right;
+    margin-top: 10px;
+    margin-right: 17px;
+    width: .18rem;
+    height: .185rem;
+}

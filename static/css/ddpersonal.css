@@ -1,0 +1,188 @@
+@charset "utf-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+    background: transparent;
+    color: #333;
+}
+li{
+	list-style: none;
+}
+html{
+	font-size: 100px;
+}
+body{
+	background-color: #f5f5f5;
+}
+/* 我的头部 */
+.f_header{
+	width: 100%;
+	background:url(/static/img/wodetop.jpg);
+	background-size: cover;
+	height: .98rem;
+}
+.f_header .head-info{
+	width: 100%;
+	height: .39rem;
+}
+.f_header .head-info p{
+	float: right;
+	font-size: .16rem; 
+	color: #fff;
+	margin-right: .23rem;
+	line-height: .39rem;
+}
+.f_header .head-info p img{
+	width: .22rem;
+	margin-top: 8px;
+}
+.f_header .head-info p .install{
+	margin-right: 6px;
+	float: left;
+}
+.f_header .head-info p .news{
+	margin-left: 16.5px;
+	float: right;
+}
+	
+.user_info{
+	height: .59rem;
+	border-bottom:1px solid #b4abb0;
+}
+.user_info .user_logo{
+	height: .3rem;
+	width: .3rem;
+	margin: 0.11rem .11rem 0 .21rem;
+	float: left;
+}
+.user_name{
+	font-size: .18rem;
+	/* margin-left: .39rem; */
+	margin-top: .16rem;
+	line-height: .22rem;
+	float: left;
+	color: #fff;
+}
+.user_quit{
+	float: right;
+	margin-right: .15rem;
+	font-size: .16rem;
+	margin-top: .17rem;
+	line-height: .18rem;
+	color: #fff;
+}
+.user_lift{
+	float: right;
+	height: .12rem;
+    width: .11rem;
+	margin: .20rem .1rem 0 0;
+}
+.wechat{
+	width: 100%;
+	height: .4rem;
+	border-bottom: 1px solid #e4e4e4;
+	background: #fff;
+}
+.no_wechat{
+	font-size: .12rem;
+	line-height: .12rem;
+	margin: .15rem 0 0 .3rem;
+	float: left;
+}
+.go_wechat{
+	float: right;
+	margin: .12rem .1rem 0 0;
+	height: .16rem;
+	line-height: .16rem;
+	font-size: .1rem;
+	color: #e94544;
+	border: 1px solid #e94544;
+	width: .61rem;
+	border-radius: .08rem;
+	text-align: center;
+}
+
+
+/*nav*/
+.f_nav{
+	width: 100%;
+	height: .74rem;
+	background: #fff;
+}
+.f_nav ul{
+	display: flex;
+	border-bottom: 1px solid #ececec;
+}
+.f_nav ul li a{
+	display: block;
+	font-size: .12rem;
+}
+.f_nav ul li{
+	margin: 0 auto;
+	text-align: center;
+	padding: .21rem 0 .17rem ;
+}
+.f_nav ul li img{
+	height: .25rem;
+	display: block;
+	margin: 0 auto;
+}
+
+/*main*/
+.my_main{
+	margin-top: 2px;
+
+}
+.main_list{
+	width: 100%;
+	background-color: #f5f5f5;
+}
+.main_list:after{
+	content:"";
+	height: 0;
+	clear: both;
+	display: block;
+}
+.main_list .list{
+	width: 1.24rem;
+    height: 1.2rem;
+	border-radius: 4px;
+	margin-left: .1rem;
+	float: left;
+	margin-top: .09rem;
+	background-color: #fff;
+	text-align: center;
+	font-size: 0;
+}
+.main_list .list a{
+
+}
+.main_list .list a>img{
+	width: .27rem;
+	height: .27rem;
+	display: block;
+	margin: 0 auto;
+	margin-top: .3rem;
+}
+.main_list .list a>span{
+	color: #4a4a4a;
+	line-height: 36px;
+	font-size: 14px;
+}
+.tele_btn{
+	width: 100%;
+	margin-bottom: .46rem;
+}
+.tele_btn p{
+	width: 190px;
+	border: 1px solid #d87373;
+	color: #d87373;
+	height: .34rem;
+	line-height: .34rem;
+	text-align: center;
+	margin: 25px auto;
+	font-size: .14rem;
+}
