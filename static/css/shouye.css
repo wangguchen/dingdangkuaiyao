@@ -286,27 +286,47 @@ html{
     font-size: .12rem;
 }
 /* 限时特惠 */
-.content .goodsList .xianshi{
+.content .goodsList .infoVosName{
     width: 100%;
 }
-.content .goodsList #xianshi .spedrug{
+.special_choose{
+    width: 100%;
+    height: .498rem;
+    text-align: center;
+    line-height: .498rem;
+    background-color: #fff
+}
+.special_choose img{
+    width: .16rem;
+    height: .16rem;
+    float: left;
+    margin-top: .2rem;
+    margin-left: 1.45rem;
+}
+.special_choose p {
+    font-size: .14rem;
+    margin-left: .2rem;
+    color: #e94544;
+    float: left;
+}
+.content .goodsList .infoVosName .spedrug{
     width: 100%;
     font-size: 14px;
     position: relative;
 }
-.content .goodsList #xianshi .spedrug img{
+.content .goodsList .infoVosName .spedrug img{
     width: 100%;
     margin-bottom: .042rem;
     transition: all 1s;
 }
-.content .goodsList #xianshi .spedrug .top{
+.content .goodsList .infoVosName .spedrug .top{
     width: 50%;
     position: absolute;
     top: 0;
     right: 0;
     padding: .20rem .08rem .20rem 0;
 }
-#xianshi .spedrug .top>p{
+.infoVosName .spedrug .top>p{
     font-size: .12rem;
     color: #686969;
     width: 100%;
@@ -315,20 +335,20 @@ html{
     white-space: nowrap;
     line-height: .19rem;
 }
-#xianshi .spedrug .top .one{
+.infoVosName .spedrug .top .one{
     color:#000;
 }
-#xianshi .spedrug .top #showcart{
+.infoVosName .spedrug .top #showcart{
     width: .264rem;
     height: .264rem;
     position: absolute;
     top: 1.066rem;
     right: .076rem;
 }
-#xianshi .spedrug .top .three{
+.infoVosName .spedrug .top .three{
     color: #de5d61;
 }
-#xianshi .spedrug .top .down{
+.infoVosName .spedrug .top .down{
     margin-top: .17rem;
 }
 .down .spec{

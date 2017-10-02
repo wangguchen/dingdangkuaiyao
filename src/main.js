@@ -5,12 +5,13 @@ import App from './App'
 import router from './router'
 import Vuelazyload from 'vue-lazyload'
 import store from "./vuex/store"
-
+import VueResource from "vue-resource"
 
 Vue.use(Vuelazyload, {
   preload: 1.3,
   attempt: 1
 })
+Vue.use(VueResource)
 
 Vue.config.productionTip = false
 

@@ -69,63 +69,8 @@
             </div>
             <!-- 医护类别 -->
             <div class="drugList">
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412066836_78_80.jpg" alt=""> <p>感冒发烧</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412318288_78_80.jpg" alt=""> <p>清热解毒</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412049395_78_80.jpg" alt=""> <p>咳嗽用药</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412247910_78_80.jpg" alt=""> <p>皮肤用药</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412304071_78_80.jpg" alt=""> <p>肠胃用药</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412131600_78_80.jpg" alt=""> <p>营养保健</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170105/1483605663135_78_80.jpg" alt=""> <p>养生花茶</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170616/1497577166175_78_80.jpg" alt=""> <p>维矿补益</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412290334_78_80.jpg" alt=""> <p>儿童用药</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412276978_78_80.jpg" alt=""> <p>妇科用药</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412261258_78_80.jpg" alt=""> <p>男科用药</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412157621_78_80.jpg" alt=""> <p>家庭常备</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170320/1489978886756_78_80.jpg" alt=""> <p>眼部护理</p>
-                </div>
-                <div class="drugType"><img src="http://img.ddsy.com/c/cms/temp/20170103/1483412112863_78_80.jpg" alt=""> <p>耳鼻喉药</p></div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412230735_78_80.jpg" alt=""> <p>风湿骨伤</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412037877_78_80.jpg" alt=""> <p>三高用药</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483411998125_78_80.jpg" alt=""> <p>滋补调养</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483412145281_78_80.jpg" alt=""> <p>性福生活</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170103/1483411977404_78_80.jpg" alt=""> <p>医疗器械</p>
-                </div>
-                <div class="drugType">
-                <img src="http://img.ddsy.com/c/cms/temp/20170424/1492997384100_78_80.jpg" alt=""> <p>个人护理</p>
+                <div class="drugType" v-for="item in categoryList" :key="item.categoryId">
+                <img :src="item.categoryIcon" alt=""> <p>{{ item.categoryName }}</p>
                 </div>
             </div>
             <!-- 附近药店 -->
@@ -151,21 +96,22 @@
                     </div>    
                 </div>
                 <!-- 限时特惠 -->
-                <div id="xianshi">
-                    <div class="spedrug">
-                        <img v-lazy='"/static/img/xianshi1.png"' alt="">
+                <div id="xianshi" class="infoVosName" v-for="item in productList" :key="item.name">
+                    <div class="special_choose" ><img src="https://img.ddky.com/c/wap/images/ddky2/choose.jpg" alt=""> <p>{{item.name}}</p></div>
+                    <div class="spedrug" v-for="pro in item.infoVos" :key="pro.goodsId">
+                        <img :src="pro.adImgUrl" alt="">
                         <div class="top">
-                            <p class="one">口腔问题的克星！</p> <p class="two">华素愈创牙膏(优效+修复 3+)+华素愈创漱口水(优效修复专用 海洋薄荷香型)赠华素愈创儿童成长牙膏</p> 
-                            <p class="specification">120g(牙膏)+260ml(漱口水)+45g(儿童牙膏)</p> 
-                            <p class="three"> 立省66.00元</p> 
+                            <p class="one">{{ pro.adText }}</p> <p class="two">{{ pro.name }}</p> 
+                            <p class="specification">{{ pro.packageSpecifications }}</p> 
+                            <p class="three">{{ pro.discontPrice}}</p> 
                             <div class="down">
-                            <span class="spec">¥78.00</span> <span class="spec1 addLine">¥144.00</span> 
-                            <p class="spec1">已卖出132件</p>
+                            <span class="spec">{{ pro.totalPrice }}</span> <span class="spec1 addLine">{{ pro.orgPrice }}</span> 
+                            <p class="spec1">{{ pro.saleVolumeText}}</p>
                             </div> 
                             <img id="showcart" src="https://img.ddky.com/c/wap/images/ddky2/car.png" alt="" @click.stop="add_goods()">
                         </div>
                     </div>
-                    <div class="spedrug">
+                    <!-- <div class="spedrug">
                         <img v-lazy='"/static/img/xianshi1.png"' alt="">
                         <div class="top">
                             <p class="one">口腔问题的克星！</p> <p class="two">华素愈创牙膏(优效+修复 3+)+华素愈创漱口水(优效修复专用 海洋薄荷香型)赠华素愈创儿童成长牙膏</p> 
@@ -180,7 +126,7 @@
                     </div>
                 </div>
                 <!-- 男士健康 -->
-                <div id="man">
+                <!-- <div id="man">
                 <div class="spedrug">
                     <img v-lazy='"http://img.ddsy.com/c/product/520062/ad/1483697619472-170106061339476.jpg?t=1000"' alt="">
                     <div class="top">
@@ -206,8 +152,8 @@
                         </div> 
                         <img id="showcart" src="https://img.ddky.com/c/wap/images/ddky2/car.png" alt="">
                     </div>
-                </div>
-                </div>
+                </div>-->
+                </div> 
             </div>
         </div>
         <div class="light_box">
@@ -225,7 +171,8 @@ export default {
     data () {
         return {
             logo:"/static/img/logo1.png",
-
+            categoryList:[], 
+            productList:[]
         }
     },
     methods:{
@@ -247,12 +194,25 @@ export default {
             document.querySelector(".confirm_box").style.display = 'none'
             
             document.querySelector(".light_box").style.display = "none"
-        }
+        },
+        getCategoryList(){
+            this.$http.jsonp("http://api.ddky.com/cms/rest.htm?sign=34554A7B78D6F5D338567A80E1EEDCA6&city=%E5%8C%97%E4%BA%AC%E5%B8%82&loginToken=bb1fb15d289993d364e5951a89486129&method=ddky.cms.h5.o2o.homepage.get&plat=H5&platform=H5&shopId=100012&t=2017-10-2%2010:49:4&uDate=46592120170926&userId=1009048835&v=1.0&versionName=4.6.0",{ credentials: true }).then(res=>{
+                this.categoryList = res.data.data.categoryList
+            })  
+        },
+         getProductList(){
+            this.$http.jsonp("http://api.ddky.com/cms/rest.htm?sign=7A4297E3EB88DA7A33C16457A15A0745&city=%E5%8C%97%E4%BA%AC%E5%B8%82&loginToken=bb1fb15d289993d364e5951a89486129&method=ddky.cms.package.get&plat=H5&platform=H5&shopId=100012&t=2017-10-2%2011:6:3&uDate=46592120170926&userId=1009048835&v=1.0&versionName=4.6.0", { credentials: true }).then(res=>{
+                console.log(res.body.result)
+                this.productList = res.body.result
+            })
+         }
     },
     created(){
       this.$nextTick(function () {
         window.addEventListener('scroll', this.color_change)
-      })
+      }),
+      this.getCategoryList()
+      this.getProductList()
     }
 }
 </script>
