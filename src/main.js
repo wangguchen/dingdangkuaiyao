@@ -6,7 +6,9 @@ import router from './router'
 import Vuelazyload from 'vue-lazyload'
 import store from "./vuex/store"
 import VueResource from "vue-resource"
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+Vue.use(VueAwesomeSwiper)
 Vue.use(Vuelazyload, {
   preload: 1.3,
   attempt: 1

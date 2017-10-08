@@ -1,8 +1,6 @@
 <template>
   <div>
-      detabil
-       <!-- 顶部导航 -->
-    <!-- <div class="detahead">
+    <div class="detahead">
         <div class="headBox">
           <p class="scan">
             <img  src="/static/img/fanhui.png" alt="">
@@ -19,13 +17,28 @@
           <img class="search" src="/static/img/sousuo.png" alt="">
         </div>
     </div>
-     -->
   </div>
 </template>
 
 <script>
 export default {
-  
+    data(){
+      return {
+        id:0
+      }
+    },
+    methods: {
+      getSkuId(){
+        this.id = this.$route.query.skuId
+
+      }
+    },
+    created(){
+      console.log(this.$route.query.skuId)
+      console.log(this.$route.query.id)
+      console.log(this.$route.query.shopId)
+      // this.getSkuId()
+    }
 }
 </script>
 <style scoped lang="css">

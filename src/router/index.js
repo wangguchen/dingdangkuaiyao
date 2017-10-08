@@ -7,6 +7,7 @@ const Home = () => import('@/pages/Home')
 const Shop = () => import('@/pages/Shop')
 const Cart = () => import('@/pages/Cart')
 const Mine = () => import('@/pages/Mine')
+const Cetegory = () => import('@/pages/Category')
 const Detail = () => import('@/pages/Detail')
 
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/detail',
       name: 'Detail',
       component: Detail
+    },
+    {
+      path: '/cetegory',
+      name: 'Cetegory',
+      component: Cetegory
     }
   ]
 })

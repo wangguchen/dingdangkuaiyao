@@ -25,11 +25,11 @@ html{
 .header{
     width: 100%;
     height: .51rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* border-bottom: 1px solid #D7D7D7; */
+    background-color: rgb(208,43,50);
     z-index: 5;
+    padding-top: .1px;
+    top:0;
+    position: fixed;
 }
 .header .form{
     display: none;
@@ -94,6 +94,7 @@ html{
     height: 1.42rem;
     overflow: hidden;
     position: relative;
+    margin-top: .51rem;
 }
 .banner .bar{
     max-width: 5000px;
